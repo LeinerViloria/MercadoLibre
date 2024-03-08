@@ -28,5 +28,47 @@
   },
   {
     "Name": "Ayuda/PQR"
+  },
+  {
+    "IsSeparator": true
+  },
+  {
+    "Name": "Supermercado"
+  },
+  {
+    "Name": "Moda"
+  },
+  {
+    "Name": "Compra internacional"
+  },
+  {
+    "Name": "Tiendas oficiales"
+  },
+  {
+    "Name": "Categorías"
+  },
+  {
+    "IsSeparator": true
+  },
+  {
+    "Name": "Resumen"
+  },
+  {
+    "Name": "Vender"
+  },
+  {
+    "Name": "Publicaciones"
+  },
+  {
+    "Name": "Bio libre"
+  },
+  {
+    "Name": "Mercado shops"
+  },
+  {
+    "IsSeparator": true
+  },
+  {
+    "Name": "Acerca de Mercado Libre"
   }
 ]

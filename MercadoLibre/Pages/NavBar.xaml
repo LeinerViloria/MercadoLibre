@@ -3,14 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:MercadoLibre.Models"
              x:Class="MercadoLibre.Pages.NavBar"
-             Title="NavBar">
+             Title="NavBar"
+             BackgroundColor="White">
     <ScrollView>
         <VerticalStackLayout>
 
-            <CollectionView ItemsSource="{Binding Items}" SelectionMode="Single">
+            <CollectionView ItemsSource="{Binding Items}" SelectionMode="Single" Margin="20, 0, 0, 0">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Menu" >
-                        <Label Text="{Binding Name}" />
+
+                        <StackLayout>
+                            <Label Text="{Binding Name}" IsVisible="{Binding ShowInfo}" TextColor="Black" />
+
+                            <BoxView IsVisible="{Binding IsSeparator}" HeightRequest="1" Color="Gray"/>
+                        </StackLayout>
+                        
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
