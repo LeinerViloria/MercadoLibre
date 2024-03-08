@@ -6,14 +6,16 @@
     "Name": "Buscar"
   },
   {
-    "Name": "Notificaciones"
+    "Name": "Notificaciones",
+    "NavigateTo": "Notifications"
   },
   {
     "Name": "Mis compras",
     "NavigateTo" : "MyPurchases"
   },
   {
-    "Name": "Favoritos"
+    "Name": "Favoritos",
+    "NavigateTo": "MyFavorites"
   },
   {
     "Name": "Suscripciones"
