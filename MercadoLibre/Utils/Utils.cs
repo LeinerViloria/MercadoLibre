@@ -11,10 +11,10 @@ namespace MercadoLibre.Utils
         {
             try
             {
-                using var stream = await FileSystem.OpenAppPackageFileAsync($"{JsonName}.json");
-                using var reader = new StreamReader(stream);
+                using var Stream = await FileSystem.OpenAppPackageFileAsync($"{JsonName}.json");
+                using var Reader = new StreamReader(Stream);
 
-                var JsonFile = reader.ReadToEnd();
+                var JsonFile = Reader.ReadToEnd();
 
                 var Obj = JsonConvert.DeserializeObject<T>(JsonFile)!;
                 return Obj;
@@ -40,9 +40,9 @@ namespace MercadoLibre.Utils
             if (string.IsNullOrEmpty(PageName))
                 return Activator.CreateInstance<ViewUnderDevelopment>();
 
-            var CommonNameSpace = typeof(Home).Namespace;
+            var PagesNamespace = typeof(Home).Namespace;
 
-            var ViewType = SearchType($"{CommonNameSpace}.{PageName}");
+            var ViewType = SearchType($"{PagesNamespace}.{PageName}");
 
             if (ViewType is null)
                 return Activator.CreateInstance<ViewUnderDevelopment>();

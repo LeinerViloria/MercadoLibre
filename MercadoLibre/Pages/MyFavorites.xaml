@@ -2,11 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MercadoLibre.Pages.MyFavorites"
-             Title="MyFavorites">
-    <VerticalStackLayout>
-        <Label 
-            Text="Mis favoritos"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Background="White">
+    <ScrollView>
+        <VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

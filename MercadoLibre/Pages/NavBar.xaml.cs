@@ -1,12 +1,11 @@
 using System.Collections.ObjectModel;
 using MercadoLibre.Models;
-using MercadoLibre.Utils;
 
 namespace MercadoLibre.Pages;
 
 public partial class NavBar : ContentPage
 {
-	public ObservableCollection<Menu> Items { get; set; }
+	public ObservableCollection<Menu> Items { get; set; } = null!;
 	public NavBar()
 	{
 		InitializeComponent();
