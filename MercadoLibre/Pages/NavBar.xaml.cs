@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using MercadoLibre.Models;
+using MercadoLibre.Utils;
 
 namespace MercadoLibre.Pages;
 
@@ -10,8 +11,14 @@ public partial class NavBar : ContentPage
 	{
 		InitializeComponent();
 
-		Items = new ObservableCollection<Menu>(new () { new Menu() { Name = "Inicio" }, new Menu() { Name = "Inicio 2" } });
+		_ = LoadData();
 
 		BindingContext = this;
+	}
+
+	private async Task LoadData()
+	{
+        var Data = await Utils.Utils.ReadJson<List<Menu>>("MenuItems");
+		Items = new ObservableCollection<Menu>(Data);
 	}
 }
