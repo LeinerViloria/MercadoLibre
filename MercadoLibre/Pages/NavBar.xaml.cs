@@ -21,4 +21,13 @@ public partial class NavBar : ContentPage
         var Data = await Utils.Utils.ReadJson<List<Menu>>("MenuItems");
 		Items = new ObservableCollection<Menu>(Data);
 	}
+
+	public void Navigate(object Sender, SelectionChangedEventArgs e)
+	{
+		var Item = (Menu?)e.CurrentSelection.FirstOrDefault();
+		var Page = Utils.Utils.GetContentPage(Item?.NavigateTo ?? string.Empty);
+
+		_ = App.FlyoutInstance.Detail.Navigation.PushAsync(Page);
+		App.FlyoutInstance.IsPresented = false;
+	}
 }

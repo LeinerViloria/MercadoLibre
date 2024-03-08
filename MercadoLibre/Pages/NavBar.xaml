@@ -32,7 +32,7 @@
                 </Grid>
             </StackLayout>
 
-            <CollectionView ItemsSource="{Binding Items}" SelectionMode="Single" Margin="20, 15, 0, 0">
+            <CollectionView ItemsSource="{Binding Items}" SelectionMode="Single" Margin="20, 15, 0, 0" SelectionChanged="Navigate">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Menu" >
 
