@@ -16,7 +16,10 @@
         </HorizontalStackLayout>
 
         <ScrollView>
-            <Label Text="ESTAS EN EL HOME" />
+            <VerticalStackLayout>
+                <Image Source="suscription_home.png" WidthRequest="350" />
+                <Image Source="envio_gratis.png" WidthRequest="350" />
+            </VerticalStackLayout>
         </ScrollView>
     </VerticalStackLayout>
     
