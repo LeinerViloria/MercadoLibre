@@ -72,6 +72,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="LoadingPages\LoadingNotification.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\MyFavorites.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MercadoLibre.Pages.Notifications"
              xmlns:models="clr-namespace:MercadoLibre.Models"
+             xmlns:loading="clr-namespace:MercadoLibre.LoadingPages"
+             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
              Title="Notificaciones"
              Background="WhiteSmoke">
     <ContentPage.ToolbarItems>
@@ -12,30 +14,40 @@
     <ScrollView>
         <VerticalStackLayout>
 
-            <CollectionView x:Name="CollectionViewRef" ItemsSource="{Binding Items}" SelectionMode="Single" SelectionChanged="ShowInfo">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:NotificationItem">
-                        
-                        <HorizontalStackLayout Margin="0,0,0, 10" Background="White" HeightRequest="130" Padding="10,0,0,10">
-                            <Image Source="{Binding IconSource}" WidthRequest="80" HeightRequest="70" />
+            <dxco:ShimmerView IsLoading="{Binding IsLoading}">
+                <dxco:ShimmerView.LoadingView>
+                    <StackLayout>
+                        <loading:LoadingNotification />
+                        <loading:LoadingNotification />
+                        <loading:LoadingNotification />
+                    </StackLayout>
+                </dxco:ShimmerView.LoadingView>
+                    
+                <dxco:ShimmerView.Content>
+                    <CollectionView x:Name="CollectionViewRef" ItemsSource="{Binding Items}" SelectionMode="Single" SelectionChanged="ShowInfo">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:NotificationItem">
 
-                            <VerticalStackLayout MaximumWidthRequest="295" Margin="4,25,0,0" VerticalOptions="StartAndExpand">
-                                <HorizontalStackLayout>
-                                    <Label Text="{Binding Title}" FontAttributes="Bold" />
-                                    <Label Text="{Binding Time}" Margin="55, 0, 0, 0" TextColor="{StaticResource Gray200}" />
+                                <HorizontalStackLayout Margin="0,0,0, 10" Background="White" HeightRequest="130" Padding="10,0,0,10">
+                                    <Image Source="{Binding IconSource}" WidthRequest="80" HeightRequest="70" />
+
+                                    <VerticalStackLayout MaximumWidthRequest="295" Margin="4,25,0,0" VerticalOptions="StartAndExpand">
+                                        <HorizontalStackLayout>
+                                            <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                            <Label Text="{Binding Time}" TextColor="{StaticResource Gray200}" />
+                                        </HorizontalStackLayout>
+
+                                        <Label Text="{Binding Description}" MaximumHeightRequest="100" VerticalOptions="StartAndExpand" MaxLines="3" FontSize="14" />
+
+                                    </VerticalStackLayout>
                                 </HorizontalStackLayout>
 
-                                <StackLayout MaximumHeightRequest="100">
-                                    <Label Text="{Binding Description}" VerticalOptions="StartAndExpand" MaxLines="3" FontSize="14" />
-                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </dxco:ShimmerView.Content>
+            </dxco:ShimmerView>
 
-                            </VerticalStackLayout>
-                        </HorizontalStackLayout>
-                        
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
