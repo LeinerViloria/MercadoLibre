@@ -4,12 +4,20 @@
              x:Class="MercadoLibre.Pages.Home">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="cart_shop.png"  />
+        <ToolbarItem Text="Buscar en mercado libre" />
+        <ToolbarItem IconImageSource="cart_shop.png" />
     </ContentPage.ToolbarItems>
-    
-    <ScrollView>
-        <VerticalStackLayout>
+
+    <VerticalStackLayout>
+        <HorizontalStackLayout HeightRequest="30" Background="{StaticResource Primary}" Padding="14, 0, 14, 0">
+            <Image Source="gps.png" />
+            <Label Text="Dirección tal, con calle x" VerticalOptions="Center" />
+            <Image Source="right.png" HeightRequest="20" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <ScrollView>
             <Label Text="ESTAS EN EL HOME" />
-        </VerticalStackLayout>
-    </ScrollView>
+        </ScrollView>
+    </VerticalStackLayout>
+    
 </ContentPage>
