@@ -23,6 +23,13 @@ public partial class Notifications : ContentPage
 
 	public void ShowInfo(object Sender, SelectionChangedEventArgs e)
 	{
+		if (CollectionViewRef.SelectedItem is null)
+			return;
 
-	}
+		var Item = (NotificationItem?)e.CurrentSelection.First();
+
+		_ = DisplayAlert(Item.Title, Item.Description, "Cerrar");
+
+        CollectionViewRef.SelectedItem = null;
+    }
 }

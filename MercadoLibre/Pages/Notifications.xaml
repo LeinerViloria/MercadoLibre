@@ -11,8 +11,8 @@
     
     <ScrollView>
         <VerticalStackLayout>
-            
-            <CollectionView ItemsSource="{Binding Items}" SelectionMode="Single" SelectionChanged="ShowInfo">
+
+            <CollectionView x:Name="CollectionViewRef" ItemsSource="{Binding Items}" SelectionMode="Single" SelectionChanged="ShowInfo">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:NotificationItem">
                         
