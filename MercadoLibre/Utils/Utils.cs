@@ -7,6 +7,11 @@ namespace MercadoLibre.Utils
 {
     internal static class Utils
     {
+        /*
+         * <summary>
+         * 
+         * <summary>
+         */
         public static async Task<T> ReadJson<T>(string JsonName)
         {
             try

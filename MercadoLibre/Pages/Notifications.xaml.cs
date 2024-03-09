@@ -10,7 +10,15 @@ public partial class Notifications : ContentPage
 	{
 		InitializeComponent();
 
+		_ = LoadData();
+
 		BindingContext = this;
+	}
+
+	public async Task LoadData()
+	{
+		var Data = await Utils.Utils.ReadJson<List<NotificationItem>>("Notifications");
+		Items = new ObservableCollection<NotificationItem>(Data);
 	}
 
 	public void ShowInfo(object Sender, SelectionChangedEventArgs e)

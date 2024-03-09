@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MercadoLibre.Pages.Notifications"
              xmlns:models="clr-namespace:MercadoLibre.Models"
-             Title="Notificaciones">
+             Title="Notificaciones"
+             Background="WhiteSmoke">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="settings.png" />
     </ContentPage.ToolbarItems>
@@ -15,16 +16,19 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:NotificationItem">
                         
-                        <HorizontalStackLayout>
-                            <Image Source="{Binding IconSource}" />
+                        <HorizontalStackLayout Margin="0,0,0, 10" Background="White" HeightRequest="130" Padding="10,0,0,10">
+                            <Image Source="{Binding IconSource}" WidthRequest="80" HeightRequest="70" />
 
-                            <VerticalStackLayout>
+                            <VerticalStackLayout MaximumWidthRequest="295" Margin="4,25,0,0" VerticalOptions="StartAndExpand">
                                 <HorizontalStackLayout>
-                                    <Label Text="{Binding Title}" />
-                                    <Label Text="{Binding Time}" />
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Time}" Margin="55, 0, 0, 0" TextColor="{StaticResource Gray200}" />
                                 </HorizontalStackLayout>
 
-                                <Label Text="{Binding Description}" />
+                                <StackLayout MaximumHeightRequest="100">
+                                    <Label Text="{Binding Description}" VerticalOptions="StartAndExpand" MaxLines="3" FontSize="14" />
+                                </StackLayout>
+
                             </VerticalStackLayout>
                         </HorizontalStackLayout>
                         
