@@ -10,9 +10,9 @@
 
     <VerticalStackLayout>
         <HorizontalStackLayout HeightRequest="30" Background="{StaticResource Primary}" Padding="14, 0, 14, 0">
-            <Image Source="gps.png" />
-            <Label Text="Dirección tal, con calle x" VerticalOptions="Center" />
-            <Image Source="right.png" HeightRequest="20" VerticalOptions="Center" />
+            <Image Source="gps.png" HeightRequest="18" VerticalOptions="Start" />
+            <Label Text="Dirección tal, con calle x" />
+            <Image Source="right.png" HeightRequest="20" VerticalOptions="Start" />
         </HorizontalStackLayout>
 
         <ScrollView>
