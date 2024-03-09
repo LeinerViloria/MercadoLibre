@@ -1,72 +1,97 @@
 [
   {
-    "Name": "Inicio"
+    "Name": "Inicio",
+    "IconSource": "home.png",
+    "NavigateTo":  "Home"
   },
   {
-    "Name": "Buscar"
+    "Name": "Buscar",
+    "IconSource": "search.png"
   },
   {
     "Name": "Notificaciones",
-    "NavigateTo": "Notifications"
+    "NavigateTo": "Notifications",
+    "IconSource": "notifications.png"
   },
   {
     "Name": "Mis compras",
-    "NavigateTo" : "MyPurchases"
+    "NavigateTo": "MyPurchases",
+    "IconSource": "buy_icon.png"
   },
   {
     "Name": "Favoritos",
-    "NavigateTo": "MyFavorites"
+    "NavigateTo": "MyFavorites",
+    "IconSource": "favorite.png"
   },
   {
-    "Name": "Suscripciones"
+    "Name": "Ofertas",
+    "IconSource": "sale_offer.png"
   },
   {
-    "Name": "Mercado Play"
+    "Name": "Suscripciones",
+    "IconSource": "suscriptions.png"
   },
   {
-    "Name": "Historial"
+    "Name": "Mercado Play",
+    "IconSource": "mercado_play.png"
   },
   {
-    "Name": "Mi cuenta"
+    "Name": "Historial",
+    "IconSource": "history.png"
   },
   {
-    "Name": "Ayuda/PQR"
+    "Name": "Mi cuenta",
+    "IconSource": "profile.png"
   },
   {
-    "IsSeparator": true
-  },
-  {
-    "Name": "Supermercado"
-  },
-  {
-    "Name": "Moda"
-  },
-  {
-    "Name": "Compra internacional"
-  },
-  {
-    "Name": "Tiendas oficiales"
-  },
-  {
-    "Name": "Categorías"
+    "Name": "Ayuda/PQR",
+    "IconSource": "headphone.png"
   },
   {
     "IsSeparator": true
   },
   {
-    "Name": "Resumen"
+    "Name": "Supermercado",
+    "IconSource": "supermarket.png"
   },
   {
-    "Name": "Vender"
+    "Name": "Moda",
+    "IconSource": "shirt.png"
   },
   {
-    "Name": "Publicaciones"
+    "Name": "Compra internacional",
+    "IconSource": "world.png"
   },
   {
-    "Name": "Bio libre"
+    "Name": "Tiendas oficiales",
+    "IconSource": "market.png"
   },
   {
-    "Name": "Mercado shops"
+    "Name": "Categorías",
+    "IconSource": "list.png"
+  },
+  {
+    "IsSeparator": true
+  },
+  {
+    "Name": "Resumen",
+    "IconSource": "paper.png"
+  },
+  {
+    "Name": "Vender",
+    "IconSource": "sell.png"
+  },
+  {
+    "Name": "Publicaciones",
+    "IconSource": "adds.png"
+  },
+  {
+    "Name": "Bio libre",
+    "IconSource": "bio.png"
+  },
+  {
+    "Name": "Mercado shops",
+    "IconSource": "market.png"
   },
   {
     "IsSeparator": true

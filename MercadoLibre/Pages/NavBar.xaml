@@ -32,12 +32,15 @@
                 </Grid>
             </StackLayout>
 
-            <CollectionView ItemsSource="{Binding Items}" SelectionMode="Single" Margin="20, 15, 0, 0" SelectionChanged="Navigate">
+            <CollectionView x:Name="CollectionViewRef" ItemsSource="{Binding Items}" SelectionMode="Single" Margin="20, 15, 0, 0" SelectionChanged="Navigate">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Menu" >
 
                         <StackLayout>
-                            <Label Text="{Binding Name}" IsVisible="{Binding ShowInfo}" TextColor="Black" />
+                            <HorizontalStackLayout>
+                                <Image Source="{Binding IconSource}" HeightRequest="40" IsVisible="{Binding ShowIcon}" />
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" IsVisible="{Binding ShowInfo}" TextColor="Black" />
+                            </HorizontalStackLayout>
 
                             <BoxView IsVisible="{Binding IsSeparator}" HeightRequest="1" Color="Gray"/>
                         </StackLayout>

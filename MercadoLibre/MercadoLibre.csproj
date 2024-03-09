@@ -57,7 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Raw\MenuItems.json" />
+	  <None Remove="Resources\Raw\*.json" />
 	</ItemGroup>
 
 	<ItemGroup>

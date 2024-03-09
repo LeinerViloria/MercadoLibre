@@ -23,10 +23,21 @@ public partial class NavBar : ContentPage
 
 	public void Navigate(object Sender, SelectionChangedEventArgs e)
 	{
+		if (CollectionViewRef.SelectedItem is null)
+			return;
+
 		var Item = (Menu?)e.CurrentSelection.FirstOrDefault();
 		var Page = Utils.Utils.GetContentPage(Item?.NavigateTo ?? string.Empty);
 
-		_ = App.FlyoutInstance.Detail.Navigation.PushAsync(Page);
-		App.FlyoutInstance.IsPresented = false;
+		var KeepInPage = Page.GetType() == typeof(Home);
+
+        App.FlyoutInstance.IsPresented = false;
+
+		CollectionViewRef.SelectedItem = null;
+
+        if (KeepInPage)
+            return;
+
+        _ = App.FlyoutInstance.Detail.Navigation.PushAsync(Page);
 	}
 }
