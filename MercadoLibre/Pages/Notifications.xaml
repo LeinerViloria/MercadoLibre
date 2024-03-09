@@ -32,13 +32,22 @@
                                     <Image Source="{Binding IconSource}" WidthRequest="80" HeightRequest="70" />
 
                                     <VerticalStackLayout MaximumWidthRequest="295" Margin="4,25,0,0" VerticalOptions="StartAndExpand">
-                                        <HorizontalStackLayout>
-                                            <Label Text="{Binding Title}" FontAttributes="Bold" />
-                                            <Label Text="{Binding Time}" TextColor="{StaticResource Gray200}" />
-                                        </HorizontalStackLayout>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
 
-                                        <Label Text="{Binding Description}" MaximumHeightRequest="100" VerticalOptions="StartAndExpand" MaxLines="3" FontSize="14" />
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="215" />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
 
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Title}" FontAttributes="Bold" />
+                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Time}" TextColor="{StaticResource Gray200}" FontSize="10" VerticalOptions="Center" HorizontalOptions="End" />
+
+                                            <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Description}" MaximumHeightRequest="100" VerticalOptions="StartAndExpand" MaxLines="3" FontSize="14" />
+                                        </Grid>
                                     </VerticalStackLayout>
                                 </HorizontalStackLayout>
 
