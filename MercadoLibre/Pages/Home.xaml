@@ -5,7 +5,7 @@
              Background="White">
     <ScrollView>
         <VerticalStackLayout>
-            
+            <Label Text="ESTAS EN EL HOME" TextColor="Black" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

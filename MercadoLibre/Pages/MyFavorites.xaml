@@ -5,7 +5,7 @@
              Background="White">
     <ScrollView>
         <VerticalStackLayout>
-
+            <Label Text="ESTAS EN MIS FAVORITOS" TextColor="Black" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
