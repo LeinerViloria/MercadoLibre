@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MercadoLibre.Pages.ViewUnderDevelopment">
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center">
+        <Image Source="development_icon.png" />
         <Label 
             Text="Esta vista está en desarrollo"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" FontSize="30" />
     </VerticalStackLayout>
 </ContentPage>
