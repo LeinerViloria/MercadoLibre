@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:MercadoLibre.Models"
              x:Class="MercadoLibre.Pages.NavBar"
-             Title="NavBar"
-             BackgroundColor="White">
+             Title="NavBar">
     <ScrollView>
         <VerticalStackLayout>
 
@@ -21,8 +20,8 @@
                         <Image Source="default_user.svg" HeightRequest="50" WidthRequest="50" />
 
                         <VerticalStackLayout>
-                            <Label Text="John Doe" TextColor="Black" />
-                            <Label Text="Mi perfíl" TextColor="Black" />
+                            <Label Text="John Doe" />
+                            <Label Text="Mi perfíl" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
 
@@ -39,11 +38,11 @@
                         <StackLayout Margin="0, 0, 0, 12">
                             <HorizontalStackLayout IsVisible="{Binding ShowIcon}">
                                 <Image Source="{Binding IconSource}" HeightRequest="40" />
-                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" Padding="22, 0, 0, 0" TextColor="Black" FontSize="15" />
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" Padding="22, 0, 0, 0" FontSize="15" />
                             </HorizontalStackLayout>
 
                             <StackLayout IsVisible="{Binding ShowOnlyText}">
-                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" TextColor="Black"  FontSize="15" />
+                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" FontSize="15" />
                             </StackLayout>
 
                             <BoxView IsVisible="{Binding IsSeparator}" HeightRequest="1" Color="Gray"/>
