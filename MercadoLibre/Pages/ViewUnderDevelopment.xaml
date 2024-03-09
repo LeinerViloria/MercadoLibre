@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MercadoLibre.Pages.ViewUnderDevelopment">
+             x:Class="MercadoLibre.Pages.ViewUnderDevelopment"
+             Title="Sin contenido">
     <VerticalStackLayout VerticalOptions="Center">
         <Image Source="development_icon.png" />
         <Label 
-            Text="Esta vista está en desarrollo"
+            Text="Esta página aún está en desarrollo"
             VerticalOptions="Start" 
-            HorizontalOptions="Center" FontSize="30" />
+            HorizontalOptions="Center" FontSize="22" FontAttributes="Bold" />
     </VerticalStackLayout>
 </ContentPage>
