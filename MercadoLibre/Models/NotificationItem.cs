@@ -1,0 +1,12 @@
+﻿
+
+namespace MercadoLibre.Models
+{
+    public class NotificationItem
+    {
+        public string IconSource { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty;
+        public string Time { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+    }
+}
