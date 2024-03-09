@@ -3,36 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MercadoLibre.Pages.MyFavorites"
              xmlns:models="clr-namespace:MercadoLibre.Models"
-             Title="Notificaciones">
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="settings.png" />
-    </ContentPage.ToolbarItems>
-    
+             Title="Mis favoritos">
     <ScrollView>
-        <VerticalStackLayout>
-            
-            <CollectionView ItemsSource="{Binding Items}" SelectionMode="Single" SelectionChanged="ShowInfo">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:NotificationItem">
-                        
-                        <HorizontalStackLayout>
-                            <Image Source="{Binding IconSource}" />
-
-                            <VerticalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Label Text="{Binding Title}" />
-                                    <Label Text="{Binding Time}" />
-                                </HorizontalStackLayout>
-
-                                <Label Text="{Binding Description}" />
-                            </VerticalStackLayout>
-                        </HorizontalStackLayout>
-                        
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-            
-        </VerticalStackLayout>
+        
     </ScrollView>
 </ContentPage>
