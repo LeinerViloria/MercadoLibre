@@ -7,7 +7,7 @@ namespace MercadoLibre.Models
         public string IconSource { get; set; } = string.Empty;
         public bool IsSeparator { get; set; }
         public bool ShowIcon => !IsSeparator && !string.IsNullOrEmpty(IconSource);
-        public bool ShowOnlyText => !ShowIcon;
+        public bool ShowOnlyText => !ShowIcon && !IsSeparator;
         public string NavigateTo { get; set; } = string.Empty;
     }
 }
