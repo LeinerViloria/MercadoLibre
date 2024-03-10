@@ -18,8 +18,19 @@ public partial class CardItemsResume : ContentView, INotifyPropertyChanged
             }
         }
     }
-	public List<ProductItem> Items { get; set; } = null!;
-	public CardItemsResume()
+
+    public static readonly BindableProperty ItemsProperty =
+    BindableProperty.Create(nameof(Items), typeof(List<ProductItem>), typeof(CardItemsResume));
+
+    public List<ProductItem> Items
+    {
+        get { return (List<ProductItem>)GetValue(ItemsProperty); }
+        set {
+            SetValue(ItemsProperty, value);
+            OnPropertyChanged(nameof(Items));
+        }
+    }
+    public CardItemsResume()
 	{
 		InitializeComponent();
 

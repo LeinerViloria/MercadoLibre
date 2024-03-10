@@ -60,7 +60,9 @@
                     </syncfusion:SfCarousel.ItemTemplate>   
                 </syncfusion:SfCarousel>
 
-                <locals:CardItemsResume Title="Inspirado en lo último que viste" />
+                <locals:CardItemsResume Title="Inspirado en lo último que viste"
+                                        Items="{Binding LastProductsSeen}"
+                                        />
             </VerticalStackLayout>
         </ScrollView>
     </VerticalStackLayout>
