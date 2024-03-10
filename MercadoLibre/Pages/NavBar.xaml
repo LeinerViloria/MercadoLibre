@@ -9,7 +9,7 @@
         <VerticalStackLayout>
 
             <StackLayout Background="{StaticResource PrimaryBrush}">
-                <Grid Padding="10, 0, 10, 0">
+                <Grid Padding="10, 0, 10, 0" Margin="0, 25, 0, 0">
 
                     <Grid.RowDefinitions>
                         <RowDefinition />
@@ -18,17 +18,17 @@
                     </Grid.RowDefinitions>
                     
                     <HorizontalStackLayout Grid.Row="0">
-                        <Image Source="default_user.svg" HeightRequest="50" WidthRequest="50" />
+                        <Image Source="user_profile.png" HeightRequest="50" WidthRequest="50" />
 
-                        <VerticalStackLayout>
-                            <Label Text="John Doe" />
+                        <VerticalStackLayout VerticalOptions="Center" Margin="10, 0, 0, 0">
+                            <Label Text="John Doe" FontAttributes="Bold" CharacterSpacing="1" FontSize="15" />
                             <Label Text="Mi perfíl" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
 
                     <Image Grid.Row="1" Source="level_suscription.png" HeightRequest="50" />
 
-                    <Image Grid.Row="2" Source="mercado_pago.png" HeightRequest="50" WidthRequest="310" Margin="0,0,0,6" />
+                    <Image Grid.Row="2" Source="mercado_pago.png" HeightRequest="50" WidthRequest="310" Margin="0,8,0,6" />
                 </Grid>
             </StackLayout>
 
