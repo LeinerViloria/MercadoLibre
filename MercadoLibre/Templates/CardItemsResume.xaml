@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards"
+             xmlns:models="clr-namespace:MercadoLibre.Models"
+             x:Class="MercadoLibre.Templates.CardItemsResume">
+    <VerticalStackLayout>
+
+        <cards:SfCardView>
+            
+            <VerticalStackLayout>
+                <Label Text="{Binding Title}" />
+
+                <syncfusion:SfListView ItemsSource="{Binding Items}">
+                    <syncfusion:SfListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:ProductItem">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Price}" />
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </syncfusion:SfListView.ItemTemplate>
+                </syncfusion:SfListView>
+            </VerticalStackLayout>
+            
+        </cards:SfCardView>
+        
+    </VerticalStackLayout>
+</ContentView>

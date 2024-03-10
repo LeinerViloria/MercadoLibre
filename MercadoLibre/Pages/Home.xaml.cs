@@ -9,6 +9,8 @@ public partial class Home : ContentPage
 	public ObservableCollection<string> CarouselItems { get; set; } = null!;
 	public ObservableCollection<CategoryItem> CategoryItems { get; set; } = null!;
 
+	public List<ProductItem> LastProductsSeen { get; set; } = null!;
+
     public Home()
 	{
 		InitializeComponent();
@@ -25,5 +27,12 @@ public partial class Home : ContentPage
 
 		CarouselItems = new ObservableCollection<string>(AddsData);
 		this.CategoryItems = new ObservableCollection<CategoryItem>(CategoryItems);
+
+		_ = LoadProductsInfo();
 	}
+
+	public async Task LoadProductsInfo()
+	{
+		LastProductsSeen = await Utils.Utils.ReadJson<List<ProductItem>>("LastProductsSeen");
+    }
 }

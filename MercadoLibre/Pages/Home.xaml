@@ -4,6 +4,7 @@
              xmlns:models="clr-namespace:MercadoLibre.Models"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
              xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:locals="clr-namespace:MercadoLibre.Templates"
              x:Class="MercadoLibre.Pages.Home">
 
     <ContentPage.ToolbarItems>
@@ -58,6 +59,8 @@
                         </DataTemplate>
                     </syncfusion:SfCarousel.ItemTemplate>   
                 </syncfusion:SfCarousel>
+
+                <locals:CardItemsResume Title="Inspirado en lo último que viste" />
             </VerticalStackLayout>
         </ScrollView>
     </VerticalStackLayout>
