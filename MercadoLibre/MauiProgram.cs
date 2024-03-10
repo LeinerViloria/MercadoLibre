@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using DevExpress.Maui;
 using Syncfusion.Maui.Core.Hosting;
+using Syncfusion.Licensing;
 
 namespace MercadoLibre
 {
@@ -9,6 +10,9 @@ namespace MercadoLibre
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+
+            SyncfusionLicenseProvider.RegisterLicense("MzE1MTYxM0AzMjM0MmUzMDJlMzBDMm1jL3lsRHo2Uk5YZE9Ub2xLeDlsQnJRV2Nmdm9tWGo2YjFVQWNGT0NBPQ==");
+
             builder
                 .UseMauiApp<App>()
                 .UseDevExpress()

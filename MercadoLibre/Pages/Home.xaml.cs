@@ -1,3 +1,5 @@
+using MercadoLibre.Models;
+using Syncfusion.Maui.Carousel;
 using System.Collections.ObjectModel;
 
 namespace MercadoLibre.Pages;
@@ -5,6 +7,7 @@ namespace MercadoLibre.Pages;
 public partial class Home : ContentPage
 {
 	public ObservableCollection<string> CarouselItems { get; set; } = null!;
+	public ObservableCollection<CategoryItem> CategoryItems { get; set; } = null!;
 
     public Home()
 	{
@@ -17,7 +20,10 @@ public partial class Home : ContentPage
 
 	public async Task LoadData()
 	{
-		var Data = await Utils.Utils.ReadJson<List<string>>("CarrouselItems");
-		CarouselItems = new ObservableCollection<string>(Data);
+		var AddsData = await Utils.Utils.ReadJson<List<string>>("CarrouselItems");
+		var CategoryItems = await Utils.Utils.ReadJson<List<CategoryItem>>("CategoryHomeItems");
+
+		CarouselItems = new ObservableCollection<string>(AddsData);
+		this.CategoryItems = new ObservableCollection<CategoryItem>(CategoryItems);
 	}
 }

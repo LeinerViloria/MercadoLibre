@@ -1,0 +1,50 @@
+[
+    {
+        "IconSource": "agro_category.png",
+        "Name": "Agro"
+    },
+    {
+        "IconSource": "bebes_category.png",
+        "Name": "Bebes"
+    },
+    {
+        "IconSource": "electro_category.png",
+        "Name": "Electro"
+    },
+    {
+        "IconSource": "juguetes_category.png",
+        "Name": "Juguetes"
+    },
+    {
+        "IconSource": "televisores_category.png",
+        "Name": "Televisores"
+    },
+    {
+        "IconSource": "moda_category.png",
+        "Name": "Moda"
+    },
+    {
+        "IconSource": "vehiculos_category.png",
+        "Name": "Vehículos"
+    },
+    {
+        "IconSource": "celulares_category.png",
+        "Name": "Celulares"
+    },
+    {
+        "IconSource": "computacion_category.png",
+        "Name": "Computación"
+    },
+    {
+        "IconSource": "hogar_category.png",
+        "Name": "Hogar"
+    },
+    {
+        "IconSource": "inmuebles_category.png",
+        "Name": "Inmuebles"
+    },
+    {
+        "IconSource": "view_all.png",
+        "Name": "Ver todas"
+    }
+]

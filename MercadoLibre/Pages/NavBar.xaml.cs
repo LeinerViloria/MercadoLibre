@@ -27,6 +27,10 @@ public partial class NavBar : ContentPage
 			return;
 
 		var Item = (Menu?)e.CurrentSelection.FirstOrDefault();
+
+		if (Item!.IsSeparator)
+			return;
+
 		var Page = Utils.Utils.GetContentPage(Item?.NavigateTo ?? string.Empty);
 
 		var KeepInPage = Page.GetType() == typeof(Home);

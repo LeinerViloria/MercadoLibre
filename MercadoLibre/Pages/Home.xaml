@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MercadoLibre.Models"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
+             xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="MercadoLibre.Pages.Home">
 
     <ContentPage.ToolbarItems>
@@ -20,13 +23,41 @@
                 <CarouselView ItemsSource="{Binding CarouselItems}" HeightRequest="170">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding}"  Aspect="AspectFill" WidthRequest="400" HeightRequest="170" VerticalOptions="End" />
+                            <Image Source="{Binding}" Aspect="AspectFill" WidthRequest="400" HeightRequest="170" VerticalOptions="End" />
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
 
                 <Image Source="suscription_home.png" Aspect="AspectFill" Margin="0,5,0,0" />
                 <Image Source="envio_gratis.png" Aspect="AspectFill" Margin="0,5,0,0" />
+
+                <syncfusion:SfCarousel ItemsSource="{Binding CategoryItems}" LoadMoreItemsCount="5" ItemHeight="75" ItemWidth="55" AllowLoadMore="True" ViewMode="Linear" Margin="0, 14, 0, 0"  >
+                    <syncfusion:SfCarousel.LoadMoreView>
+                        <sfavatar:SfAvatarView 
+                            ContentType="Default"  
+                           AvatarShape="Circle"
+                           AvatarSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           ImageSource="load_more.png"
+                           Stroke="{StaticResource MercadoLibreBackground}"/>
+                    </syncfusion:SfCarousel.LoadMoreView>
+                    <syncfusion:SfCarousel.ItemTemplate>
+                        <DataTemplate x:DataType="models:CategoryItem">
+                            <VerticalStackLayout>
+                                <sfavatar:SfAvatarView 
+                                    ContentType="Default"  
+                                   AvatarShape="Circle"
+                                   AvatarSize="Large"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   ImageSource="{Binding IconSource}"
+                                   Stroke="{StaticResource MercadoLibreBackground}" />
+                                <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="Micro" LineBreakMode="TailTruncation" />
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </syncfusion:SfCarousel.ItemTemplate>   
+                </syncfusion:SfCarousel>
             </VerticalStackLayout>
         </ScrollView>
     </VerticalStackLayout>
