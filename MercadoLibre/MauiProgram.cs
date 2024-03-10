@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using DevExpress.Maui;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace MercadoLibre
 {
@@ -11,6 +12,7 @@ namespace MercadoLibre
             builder
                 .UseMauiApp<App>()
                 .UseDevExpress()
+                .ConfigureSyncfusionCore()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
