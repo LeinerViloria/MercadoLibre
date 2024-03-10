@@ -32,7 +32,7 @@
                                     <Image Source="{Binding IconSource}" WidthRequest="80" HeightRequest="70" />
 
                                     <VerticalStackLayout MaximumWidthRequest="295" Margin="4,25,0,0" VerticalOptions="StartAndExpand">
-                                        <Grid>
+                                        <Grid Padding="0,0,8,0">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition />
                                                 <RowDefinition />
