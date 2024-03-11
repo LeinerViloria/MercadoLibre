@@ -11,15 +11,14 @@
         <ToolbarItem Text="Buscar en mercado libre" />
         <ToolbarItem IconImageSource="cart_shop.png" />
     </ContentPage.ToolbarItems>
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout HeightRequest="34" Background="{StaticResource Primary}" Padding="14, 0, 14, 0">
+                <Image Source="gps.png" HeightRequest="18" VerticalOptions="Start" />
+                <Label Text="Dirección tal, con calle x" />
+                <Image Source="right.png" HeightRequest="20" VerticalOptions="Start" />
+            </HorizontalStackLayout>
 
-    <VerticalStackLayout>
-        <HorizontalStackLayout HeightRequest="34" Background="{StaticResource Primary}" Padding="14, 0, 14, 0">
-            <Image Source="gps.png" HeightRequest="18" VerticalOptions="Start" />
-            <Label Text="Dirección tal, con calle x" />
-            <Image Source="right.png" HeightRequest="20" VerticalOptions="Start" />
-        </HorizontalStackLayout>
-
-        <ScrollView>
             <VerticalStackLayout Padding="10,0,10,10">
                 <CarouselView ItemsSource="{Binding CarouselItems}" HeightRequest="170">
                     <CarouselView.ItemTemplate>
@@ -35,41 +34,41 @@
                 <syncfusion:SfCarousel ItemsSource="{Binding CategoryItems}" LoadMoreItemsCount="5" ItemHeight="75" ItemWidth="55" AllowLoadMore="True" ViewMode="Linear" Margin="0, 14, 0, 0"  >
                     <syncfusion:SfCarousel.LoadMoreView>
                         <sfavatar:SfAvatarView 
-                            ContentType="Default"  
-                           AvatarShape="Circle"
-                           AvatarSize="Large"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           ImageSource="load_more.png"
-                           Stroke="{StaticResource MercadoLibreBackground}"/>
+                                ContentType="Default"  
+                                AvatarShape="Circle"
+                                AvatarSize="Large"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                ImageSource="load_more.png"
+                                Stroke="{StaticResource MercadoLibreBackground}"/>
                     </syncfusion:SfCarousel.LoadMoreView>
+
                     <syncfusion:SfCarousel.ItemTemplate>
                         <DataTemplate x:DataType="models:CategoryItem">
                             <VerticalStackLayout>
                                 <sfavatar:SfAvatarView 
-                                    ContentType="Default"  
-                                   AvatarShape="Circle"
-                                   AvatarSize="Large"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"
-                                   ImageSource="{Binding IconSource}"
-                                   Stroke="{StaticResource MercadoLibreBackground}" />
+                                ContentType="Default"  
+                                AvatarShape="Circle"
+                                AvatarSize="Large"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                ImageSource="{Binding IconSource}"
+                                Stroke="{StaticResource MercadoLibreBackground}" />
                                 <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="Micro" LineBreakMode="TailTruncation" />
                             </VerticalStackLayout>
                         </DataTemplate>
-                    </syncfusion:SfCarousel.ItemTemplate>   
+                    </syncfusion:SfCarousel.ItemTemplate>
                 </syncfusion:SfCarousel>
 
                 <locals:CardItemsResume Title="Inspirado en lo último que viste"
-                                        JsonName="LastProductsSeen"/>
+                                    JsonName="LastProductsSeen"/>
 
                 <locals:CardItemsResume Title="Relacionado con tus vistas en Computación"
-                        JsonName="LastProductsSeen"/>
+                    JsonName="LastProductsSeen"/>
 
                 <locals:CardItemsResume Title="Elegidos para ti en Consolas y videojuegos"
-                        JsonName="GamesProducts"/>
+                    JsonName="GamesProducts"/>
             </VerticalStackLayout>
-        </ScrollView>
-    </VerticalStackLayout>
-    
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
