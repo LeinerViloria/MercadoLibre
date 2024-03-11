@@ -60,14 +60,14 @@
                     </syncfusion:SfCarousel.ItemTemplate>
                 </syncfusion:SfCarousel>
 
-                <locals:CardItemsResume Title="Inspirado en lo último que viste"
-                                    JsonName="LastProductsSeen"/>
+                <locals:CardItemsResume Title="Ofertas"
+                                    JsonName="Offers"/>
 
                 <locals:CardItemsResume Title="Relacionado con tus vistas en Computación"
-                    JsonName="LastProductsSeen"/>
+                    JsonName="Products"/>
 
                 <locals:CardItemsResume Title="Elegidos para ti en Consolas y videojuegos"
-                    JsonName="GamesProducts"/>
+                    JsonName="Offers"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

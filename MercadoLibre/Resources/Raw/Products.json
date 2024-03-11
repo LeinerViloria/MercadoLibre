@@ -1,0 +1,24 @@
+[
+    {
+        "Image": "xiaomi.png",
+        "Name": "Xiaomi Redmi Note 13 Pro 5G Dual SIM 512 GB negro 12 GB RAM",
+        "Price": 2616500,
+        "DiscountPercentage": 46
+    },
+    {
+        "Image": "pesas.png",
+        "Name": "Kit De Pesas Magnux Ejercicio Mancuernas Juego De Pesas Termoforradas",
+        "Price": 213800
+    },
+    {
+        "Image": "audifonos.png",
+        "Name": "Audífonos Sony Bluetooth Con Noise Cancelling | Wf-1000xm5 Color Negro",
+        "Price": 2164799,
+        "DiscountPercentage": 56
+    },
+    {
+        "Image": "samsung.png",
+        "Name": "Samsung Galaxy S23 Ultra Dual SIM 256 GB phantom black 12 GB RAM",
+        "Price": 7216500
+    }
+]
