@@ -1,13 +1,13 @@
 using MercadoLibre.Models;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using MercadoLibre.Utils;
 
 namespace MercadoLibre.Templates;
 
 public partial class CardItemsResume : ContentView, INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
-    private string TitleValue {  get; set; }
+    private string TitleValue { get; set; }
     public string Title { 
         get { return TitleValue; } set 
         {
@@ -19,17 +19,9 @@ public partial class CardItemsResume : ContentView, INotifyPropertyChanged
         }
     }
 
-    public static readonly BindableProperty ItemsProperty =
-    BindableProperty.Create(nameof(Items), typeof(List<ProductItem>), typeof(CardItemsResume));
+    public string JsonName { get; set; }
 
-    public List<ProductItem> Items
-    {
-        get { return (List<ProductItem>)GetValue(ItemsProperty); }
-        set {
-            SetValue(ItemsProperty, value);
-            OnPropertyChanged(nameof(Items));
-        }
-    }
+    public List<ProductItem> Items { get; set; }
     public CardItemsResume()
 	{
 		InitializeComponent();
@@ -40,5 +32,10 @@ public partial class CardItemsResume : ContentView, INotifyPropertyChanged
     protected override void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    private async Task LoadData()
+    {
+        Items = await Utils.Utils.ReadJson<List<ProductItem>>($"{JsonName}.json");
     }
 }

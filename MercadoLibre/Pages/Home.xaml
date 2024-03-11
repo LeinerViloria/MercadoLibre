@@ -61,8 +61,7 @@
                 </syncfusion:SfCarousel>
 
                 <locals:CardItemsResume Title="Inspirado en lo último que viste"
-                                        Items="{Binding LastProductsSeen}"
-                                        />
+                                        JsonName="LastProductsSeen"/>
             </VerticalStackLayout>
         </ScrollView>
     </VerticalStackLayout>
