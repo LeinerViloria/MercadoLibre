@@ -10,7 +10,7 @@
         <cards:SfCardView Margin="0, 5, 0, 5">
             
             <VerticalStackLayout>
-                <Label Text="{Binding Title}" />
+                <Label Text="{Binding Title}" FontAttributes="Bold" Padding="10, 5, 10, 5" />
 
                 <syncfusion:SfListView ItemsSource="{Binding Items}">
                     <syncfusion:SfListView.ItemTemplate>
