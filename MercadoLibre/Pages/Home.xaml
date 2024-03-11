@@ -62,6 +62,12 @@
 
                 <locals:CardItemsResume Title="Inspirado en lo último que viste"
                                         JsonName="LastProductsSeen"/>
+
+                <locals:CardItemsResume Title="Relacionado con tus vistas en Computación"
+                        JsonName="LastProductsSeen"/>
+
+                <locals:CardItemsResume Title="Elegidos para ti en Consolas y videojuegos"
+                        JsonName="GamesProducts"/>
             </VerticalStackLayout>
         </ScrollView>
     </VerticalStackLayout>

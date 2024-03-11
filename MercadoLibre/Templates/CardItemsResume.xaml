@@ -7,7 +7,7 @@
              x:Class="MercadoLibre.Templates.CardItemsResume">
     <VerticalStackLayout>
 
-        <cards:SfCardView>
+        <cards:SfCardView Margin="0, 5, 0, 5">
             
             <VerticalStackLayout>
                 <Label Text="{Binding Title}" />
