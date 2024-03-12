@@ -4,7 +4,47 @@
              x:Class="MercadoLibre.Pages.MyFavorites"
              xmlns:models="clr-namespace:MercadoLibre.Models"
              Title="Mis favoritos">
-    <ScrollView>
-        
-    </ScrollView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Buscar" IconImageSource="search.png" />
+        <ToolbarItem Text="Carrito" IconImageSource="shoppingcart.png" />
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <SearchBar Grid.Column="1" TextChanged="SearchBar_TextChanged" />
+                <Image Grid.Column="0" Source="magnifyingglass.png" />
+            </Grid>
+
+            <TabbedPage>
+                <TabbedPage.Children>
+                    <ContentPage Title="Favoritos">
+                        <ContentPage.Content> 
+                            <StackLayout>
+                                                <Image Source="favorite.png" WidthRequest="100" HeightRequest="100" Margin="80" />
+                                                <Label Text="Aún no tienes elementos seleccionados" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                                                <Label Text="Agregalo haciendo click en el corazon de la pagina de productos" FontSize="Body" HorizontalTextAlignment="Center" Margin="10"/>
+                            </StackLayout>
+                                       
+                        </ContentPage.Content>
+                    </ContentPage>
+                    <ContentPage Title="Listas" >
+                        <ContentPage.Content>
+                            <StackLayout>
+                                <Image Source="list.png" WidthRequest="100" HeightRequest="100" Margin="80"/>
+                                <Label Text="Empieza a Crear Lista" FontSize="Title" HorizontalTextAlignment="Center" />
+                                <Label Text="Organiza y agrupa los productos favoritos como preferencias" FontSize="Body" HorizontalTextAlignment="Center" Margin="10"/>
+                            
+                            </StackLayout>
+                        </ContentPage.Content>
+                    </ContentPage>
+                </TabbedPage.Children>
+            </TabbedPage>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
