@@ -9,7 +9,7 @@ namespace MercadoLibre.Utils
     {
         /*
          * <summary>
-         * 
+         * Recibe el nombre del json y busca el archivo que se encuentre en la ruta Resources/Raw/*.json
          * <summary>
          */
         public static async Task<T> ReadJson<T>(string JsonName)
@@ -29,6 +29,12 @@ namespace MercadoLibre.Utils
             }
         }
 
+        /*
+         * <summary>
+         *      A través del assembly de c#, se busca aquella propiedad que coincida en todo el código, donde el name es
+         *      Namespace más el nombre de lo que se busque
+         * </summary>
+         */
         public static Type? SearchType(string Name)
         {
             var Result = AppDomain.CurrentDomain
@@ -40,6 +46,12 @@ namespace MercadoLibre.Utils
             return Result;
         }
 
+        /*
+         * <summary>
+         *      Se busca la página por nombre de la misma, dicha página debe tener el mismo namespace del Home,
+         *      si no se encuentra la página que retorna es ViewUnderDevelopment
+         * </summary> 
+         */
         public static ContentPage GetContentPage(string PageName)
         {
             if (string.IsNullOrEmpty(PageName))
