@@ -29,12 +29,10 @@ public partial class MyPurchases : ContentPage, INotifyPropertyChanged
 	{
 		await SetData();
 
-		BusyIndicator.IsRunning = false;
-
         IsLoading = false;
 		OnPropertyChanged(nameof(IsLoading));
 		OnPropertyChanged(nameof(ShowCollection));
-    }
+	}
 
 	public void LoadMoreCommand(object Sender, EventArgs e)
 	{
@@ -50,5 +48,5 @@ public partial class MyPurchases : ContentPage, INotifyPropertyChanged
         Items = Data;
 
 		OnPropertyChanged(nameof(Items));
-    }
+	}
 }

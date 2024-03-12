@@ -12,11 +12,44 @@
                               IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"
                               AnimationType="CircularMaterial" HeightRequest="700" IndicatorColor="{StaticResource Primary}" />
 
-            <dxcv:DXCollectionView x:Name="collectionView" IsVisible="{Binding ShowCollection}" ItemsSource="{Binding Items}" IsLoadMoreEnabled="False" LoadMoreCommand="{Binding LoadMoreCommand}">
+            <dxcv:DXCollectionView x:Name="collectionView" Margin="8, 0, 8, 0" IsVisible="{Binding ShowCollection}" ItemsSource="{Binding Items}" IsLoadMoreEnabled="False" LoadMoreCommand="{Binding LoadMoreCommand}">
                 <dxcv:DXCollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:PurchaseItem">
 
-                        <Label Text="{Binding SellDate}" />
+                        <cards:SfCardView Margin="0, 5, 0, 5">
+                            
+                            <VerticalStackLayout HeightRequest="160">
+                                <Grid Padding="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding SellDate}" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="Ver más" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" />
+                                </Grid>
+
+                                <BoxView HeightRequest="1" Color="Gray" />
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding ImageSource}" VerticalOptions="Center" HeightRequest="105" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" />
+
+                                    <Label Text="{Binding State}" FontSize="Small" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" />
+                                    <Label Text="{Binding ArrivedDate}" Grid.Row="1" Grid.Column="1" />
+                                </Grid>
+                            </VerticalStackLayout>
+                            
+                        </cards:SfCardView>
 
                     </DataTemplate>
                 </dxcv:DXCollectionView.ItemTemplate>
