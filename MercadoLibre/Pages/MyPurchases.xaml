@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:dxcv="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
+             xmlns:models="clr-namespace:MercadoLibre.Models"
+             xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards"
              x:Class="MercadoLibre.Pages.MyPurchases">
     <ScrollView>
         <VerticalStackLayout>
-            <Label Text="ESTAS EN MIS COMPRAS" TextColor="Black" />
+            <core:SfBusyIndicator x:Name="BusyIndicator"
+                              IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"
+                              AnimationType="CircularMaterial" HeightRequest="700" IndicatorColor="{StaticResource Primary}" />
+
+            <dxcv:DXCollectionView x:Name="collectionView" IsVisible="{Binding ShowCollection}" ItemsSource="{Binding Items}" IsLoadMoreEnabled="False" LoadMoreCommand="{Binding LoadMoreCommand}">
+                <dxcv:DXCollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:PurchaseItem">
+
+                        <Label Text="{Binding SellDate}" />
+
+                    </DataTemplate>
+                </dxcv:DXCollectionView.ItemTemplate>
+            </dxcv:DXCollectionView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
